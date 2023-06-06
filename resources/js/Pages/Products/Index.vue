@@ -1,10 +1,14 @@
 <script setup>
+
+import RootLayout from "../../Layouts/RootLayout.vue";
+
 defineProps({
     products: Array,
 })
+
 </script>
 <template>
-    <div>
+    <RootLayout>
         <ul>
             <li
                 v-for="product in products"
@@ -13,5 +17,5 @@ defineProps({
                 {{ product.name }} - ${{ product.price }}
             </li>
         </ul>
-    </div>
+    </RootLayout>
 </template>
